@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "produits"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nomProduit",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "25"
+        },
+        {
+            "fieldName": "prixUnitaire",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "50"
+        }
+    ],
+    "changelogDate": "20180412111852",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "produits",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}
